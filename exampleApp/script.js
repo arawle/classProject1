@@ -26,6 +26,7 @@ $(function() {
 
 		if (func[0] === fx) {
 				useFunction(func);
+				$('#screen').text(  '\u0192(x) = ' + equals(func.substring(1)));
 		} else {
 			var newOutput = equals(func);
 			$('#screen').text(math.eval(newOutput));
@@ -68,6 +69,7 @@ $(function() {
 		// get the evaluated string equals() using the noF variable
 		var funcDraw = equals(noF);
 
+		//graphs the input
 		function draw() {
 	    try {
 	      functionPlot({
@@ -85,7 +87,7 @@ $(function() {
 	    }
   	};
   draw();
-	}
+	} 
 
 });
 
