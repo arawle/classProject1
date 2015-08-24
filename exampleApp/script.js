@@ -26,7 +26,7 @@ $(function() {
 
 		if (func[0] === fx) {
 				useFunction(func);
-				$('#screen').text(  '\u0192(x) = ' + equals(func.substring(1)));
+				$('#screen').text(  '\u0192' + equals(func.substring(1)));
 		} else {
 			var newOutput = equals(func);
 			$('#screen').text(math.eval(newOutput));
@@ -65,7 +65,8 @@ $(function() {
 	// This function runs when 'f' is the first character in the lcd
 	function useFunction (lcdVal) {
 		// get rid of the starting 'f'
-		var noF = lcdVal.substring(1);
+		var noF = lcdVal.substring(5);
+		console.log(noF)
 		// get the evaluated string equals() using the noF variable
 		var funcDraw = equals(noF);
 
