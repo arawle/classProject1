@@ -1,0 +1,70 @@
+<html>
+<head>
+	<title>Calculator</title>
+  <link rel='stylesheet' type='text/css' href='style.css' />
+  <script type='text/javascript' src='http://code.jquery.com/jquery-2.1.4.min.js'></script>
+   <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/mathjs/2.1.1/math.js'></script>
+     <!-- load http://maurizzzio.github.io/function-plot/ -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js'></script>
+  <script src='http://brcdn.org/RbDt4b0Shej4JLF7KBQEilNbIiI.js'></script>
+
+	<script type='text/javascript' src='script.js'></script>
+</head>
+
+<body>
+
+	<!-- <div id = 'head'>
+		<header>
+			<h1>Calculator</h1>
+		  <img id='header' img src='header (1).jpg' alt='Banner Image'/ width='100%' height='150px'>
+		</header>
+	</div>  -->
+ 
+ <div id='calculator'>
+    <!-- new plot add -->
+    <div id='plot'></div>
+
+    <div id='screen-container'>
+      <div id='screen'></div>
+    </div>
+
+    <div id='button-container'>
+      <div class='buttons'>
+        <span class='operator' id='cancel'>C</span>
+        <span class='operator'>&#402;(x)= </span>
+        <span class='operator'>^</span>
+        <span class='operator'>sin</span>
+        <span class='operator'>cos</span>
+        <span class='operator'>tan</span>
+        <span class='operator'>&deg;</span>
+        <span class='operator'>(</span>
+        <span class='operator'>)</span>
+        <span class='operator'>&Pi;</span>
+        <span class='operator'>i</span>
+        <span class='operator'>+</span>
+        <span class='operator'>-</span>
+        <span class='operator'>&times;</span>
+        <span class='operator'>&divide;</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span class='operator'>x</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span class='operator' id = 'deleteIt'>Delete</span>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span class='operator' id='calc'>=</span>
+        <div class='l-row'>
+          <span id='zero'>0</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
