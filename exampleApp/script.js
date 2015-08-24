@@ -22,8 +22,10 @@ $(function() {
 
 	// determine if using as calculator or function plotter
 	function funcOrNot (func) {
+		// define the f(x)= as unicode
 		var fx = '\u0192';
 
+		//if the string begins with f then evaluate it as function plotter, else use in calc.
 		if (func[0] === fx) {
 				useFunction(func);
 				$('#screen').text(  '\u0192' + equals(func.substring(1)));
@@ -82,11 +84,13 @@ $(function() {
 	        }]
 	      });
 	    }
+	    // if invalid, throw error
 	    catch (err) {
 	      console.log(err);
 	      alert(err);
 	    }
   	};
+  // call the draw() and plot it!
   draw();
 	} 
 
