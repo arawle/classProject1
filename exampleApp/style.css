@@ -59,6 +59,7 @@ h1 {
 }
 
 #zero {
+	position: relative;
   width: 225px;
 }
 
