@@ -2,8 +2,6 @@
 $(function() {
 
 	$('.buttons').on('click', 'span', function(){
-		console.log(   );
-
 		var lcd = $('#screen').html();
 		var keyVal = $(this).html();
 
@@ -17,14 +15,12 @@ $(function() {
 			//displays pushed buttons on screen
 			$('#screen').text( lcd + keyVal );
 		}
-
 	});	
 
 	// determine if using as calculator or function plotter
 	function funcOrNot (func) {
 		// define the f(x)= as unicode
 		var fx = '\u0192';
-
 		//if the string begins with f then evaluate it as function plotter, else use in calc.
 		if (func[0] === fx) {
 				useFunction(func);
@@ -45,7 +41,6 @@ $(function() {
 		var degrees = '\u00B0';
 		var multiply = '\u00D7';
 		var equalNotTotal = '\u003D';
-
 		// create the newLcd by looping through each input. Special cases for unknown characters like 
 		// divide, multiply, pi, degrees
 		for (var i = 0; i < lcdVal.length; i++){
@@ -66,33 +61,33 @@ $(function() {
 
 	// This function runs when 'f' is the first character in the lcd
 	function useFunction (lcdVal) {
-		// get rid of the starting 'f'
+		// get rid of the starting first 5 characters of the lcdVal string 'f(x)='
 		var noF = lcdVal.substring(5);
-		console.log(noF)
 		// get the evaluated string equals() using the noF variable
 		var funcDraw = equals(noF);
-
-		//graphs the input
-		function draw() {
-	    try {
-	      functionPlot({
-	        target: '#plot',
-	        yDomain: [-10, 10],
-	        xDomain: [-10, 10],
-	        data: [{
-	          fn: math.eval('f(x) =' + funcDraw)
-	        }]
-	      });
-	    }
-	    // if invalid, throw error
-	    catch (err) {
-	      console.log(err);
-	      alert(err);
-	    }
-  	};
-  // call the draw() and plot it!
-  draw();
+		//calls on draw() 
+		draw(funcDraw);
 	} 
+
+	function draw(funcDraw) {
+	  try {
+	    functionPlot({
+	      target: '#plot',
+	      yDomain: [-10, 10],
+	      xDomain: [-10, 10],
+	      data: [{
+	        fn: math.eval('f(x) =' + funcDraw)
+	      }]
+	    });
+	  }
+	  // if invalid, throw error
+	  catch (err) {
+	    console.log(err);
+	    alert(err);
+	  }
+	};
+  // call the draw() and plot it!
+ 
 
 });
 
