@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Rock, Paper, Scissors Game</title>
+	<title>Calculator</title>
   <link rel='stylesheet' type='text/css' href='style.css' />
   <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
    <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/mathjs/2.1.1/math.js'></script>
@@ -9,39 +9,43 @@
 
 <body>
 
-	<div class="top">
+	<!-- <div id = 'head'>
 		<header>
-			<h1> Rock, Paper, Scissors Game</h1>
-		  <img id='header' img src='../header (1).jpg' alt='Banner Image'/ width='100%' height='150px'>
+			<h1>Calculator</h1>
+		  <img id='header' img src='header (1).jpg' alt='Banner Image'/ width='100%' height='150px'>
 		</header>
-	</div>
+	</div>  -->
+ 
+ <div id="calculator">
 
-  <br/><br/>
+    <div id="screen-container">
+      <div id="screen"></div>
+    </div>
 
-  <section class='fit'>
-  	<div data='rock' class='rock'>rock</div>
-  	<div data='paper' class='paper'>paper</div>
-  	<div data='scissors' class='scissors'>scissors</div>
-  </section>
+    <div id="button-container">
+      <div class="buttons">
+        <span class="operator" id="cancel">C</span>
+        <span class="operator">&divide;</span>
+        <span class="operator">x</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span class="operator">-</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span class="operator">+</span>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span class="operator" id="calc">=</span>
+        <div class="l-row">
+          <span id="zero">0</span>
+        </div>
+      </div>
+    </div>
 
-  <br/>
-
-  <section class='choiceDisplay'> Click rock, paper, or scissors to begin </section>
-
-	<br/><br/>
-
-  <section class='counter'>
-    <div id='counter'></div>
-  </section>
-
-	<br/><br/>
-
-  <div class='button'>
-  	<button>Reset Game</button>
   </div>
-
-   <br/>
-
 
 </body>
 
