@@ -8,11 +8,11 @@ $(function() {
 		var keyVal = $(this).html();
 
 		if ( $(this).attr('id') === 'calc' ) {
-			equals(lcd);
+			funcOrNot(lcd);
 		} else if ( $(this).attr('id') === 'cancel' ){
 			$('#screen').html(null);
 		} else if ($(this).attr('id') === '=')
-			equals(lcd);
+			funcOrNot(lcd);
 		else {
 			//displays pushed buttons on screen
 			$('#screen').text( lcd + keyVal );
@@ -20,6 +20,19 @@ $(function() {
 
 	});	
 
+	// determine if using as calculator or function plotter
+	function funcOrNot (func) {
+		var fx = '\u0192';
+
+		if (func[0] === fx) {
+				useFunction(func);
+		} else {
+			var newOutput = equals(func);
+			$('#screen').text(math.eval(newOutput));
+		}
+	}
+
+	// this is the only function used if using as a calculator
 	function equals (lcdVal) {
 		// convert the lcdVal into a string which can be evaluated using math.eval
 		var newLcd = '';
@@ -28,15 +41,12 @@ $(function() {
 		var pi = '\u03A0';
 		var degrees = '\u00B0';
 		var multiply = '\u00D7';
-		var fx = '\u0192';
 		var equalNotTotal = '\u003D';
 
 		// create the newLcd by looping through each input. Special cases for unknown characters like 
-		// divide, multiply, and fx
+		// divide, multiply, pi, degrees
 		for (var i = 0; i < lcdVal.length; i++){
-			if (lcdVal[0] === fx) {
-				useFunction(lcdVal);
-			} else if (lcdVal[i] === divide){
+			if (lcdVal[i] === divide){
 				newLcd = newLcd + '/';
 			} else if (lcdVal[i] === pi) {
 				newLcd = newLcd + 'pi';
@@ -47,18 +57,34 @@ $(function() {
 			} else {
 				newLcd = newLcd + lcdVal[i];
 			}
-		// output the answer to the string
-		}$('#screen').text(math.eval(newLcd));
+			// return output
+		} return (newLcd);
 	}
 
-	// if the value of i[0] === var fx (defined in equals()) this function will be run to solve
+	// This function runs when 'f' is the first character in the lcd
 	function useFunction (lcdVal) {
-		// require plot.html
-		
+		// get rid of the starting 'f'
+		var noF = lcdVal.substring(1);
+		// get the evaluated string equals() using the noF variable
+		var funcDraw = equals(noF);
 
-
-
-
+		function draw() {
+	    try {
+	      functionPlot({
+	        target: '#plot',
+	        yDomain: [-10, 10],
+	        xDomain: [-10, 10],
+	        data: [{
+	          fn: math.eval('f(x) =' + funcDraw)
+	        }]
+	      });
+	    }
+	    catch (err) {
+	      console.log(err);
+	      alert(err);
+	    }
+  	};
+  draw();
 	}
 
 });
