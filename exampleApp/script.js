@@ -9,9 +9,11 @@ $(function() {
 			funcOrNot(lcd);
 		} else if ( $(this).attr('id') === 'cancel' ){
 			$('#screen').html(null);
-		} else if ($(this).attr('id') === '=')
+		} else if ($(this).attr('id') === '=') {
 			funcOrNot(lcd);
-		else {
+		} else if ($(this).attr('id') === 'deleteIt'){
+			$('#screen').text(lcd.substring(0, lcd.length - 1))
+		} else {
 			//displays pushed buttons on screen
 			$('#screen').text( lcd + keyVal );
 		}
