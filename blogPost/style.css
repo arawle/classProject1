@@ -30,3 +30,19 @@ h1 {
 img {
 	opacity: 0.75;
 }
+
+pre {
+	background-color: #ADB7B9;
+	padding: 7px;
+	margin: 10px;
+	text-align: left;
+	width: 830px;
+}
+
+#npmText {
+	width: 154px;
+}
+
+#textPos {
+	margin-left: 5px;
+}
