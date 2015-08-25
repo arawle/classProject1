@@ -4,19 +4,20 @@ $(function() {
 	$('.click4Ex').css('cursor','help')
 
 	// Change exampleDiv to display example when Click! is clicked
-	$('.click4Ex').on('click', function () {
-		alert('hi');
+	$('.click4Ex').on('click', this.id, function () {
+		// Get the value of the corresponding key in imgEx
+		$('#exampleDiv').html(imgEx[this.id]);
 	})
 
 
 
-// var imgEx = {
-// 	sort: ,
-// 	flatten: ,
-// 	pickRandom: ,
-// 	forEach: ,
-// 	filter: 
-// }
+var imgEx = {
+	sort: 'hi',
+	flatten: 'flat'
+	// pickRandom: ,
+	// forEach: ,
+	// filter: 
+}
 
 
 
