@@ -85,8 +85,6 @@ $(function() {
 	    alert(err);
 	  }
 	};
-  // call the draw() and plot it!
- 
 
 });
 
