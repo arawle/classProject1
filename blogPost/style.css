@@ -41,6 +41,8 @@ pre {
 
 table {
 	border: 1px solid black;
+	width: 55%;
+	float: left;
 }
 
 td {
@@ -53,17 +55,16 @@ td {
 }
 
 .divExam {
-	height: 150px; 
-	width: 150px;
+	height: 200px; 
+	width: 450px;
+	float: left;
 }
 
 #exampleDiv {
-	border: 1px solid black;
-	height: 200px; 
-	width: 200px;
-	float: right;
+	height: 500px;
+	width: 30%;
+	float: left;
 }
-
 
 #npmText {
 	width: 154px;
