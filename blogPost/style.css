@@ -1,0 +1,32 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+	padding: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	background-color: #FCEBCE;
+	border-radius: 10px;
+	border-style: solid;
+	border-color: black;
+}
+
+head {
+	text-align: center;
+  height: 5%;
+  width: 100%;
+ }
+
+h1 {
+	position: absolute;
+	margin: 5px;
+	color: black;
+}
+
+img {
+	opacity: 0.75;
+}

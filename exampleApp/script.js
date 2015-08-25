@@ -41,7 +41,6 @@ $(function() {
 		var	divide = '\u00F7';
 		var pi = '\u03A0';
 		var degrees = '\u00B0';
-		var multiply = '\u00D7';
 		var equalNotTotal = '\u003D';
 		// create the newLcd by looping through each input. Special cases for unknown characters like 
 		// divide, multiply, pi, degrees
@@ -52,8 +51,6 @@ $(function() {
 				newLcd = newLcd + 'pi';
 			}else if (lcdVal[i] === degrees) {
 				newLcd = newLcd + '(deg)';
-			}else if (lcdVal[i] === multiply) {
-				newLcd = newLcd + '*';
 			} else {
 				newLcd = newLcd + lcdVal[i];
 			}
