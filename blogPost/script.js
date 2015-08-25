@@ -5,18 +5,18 @@ $(function() {
 
 	// Change exampleDiv to display example when Click! is clicked
 	$('.click4Ex').on('click', this.id, function () {
-		// Get the value of the corresponding key in imgEx
-		$('#exampleDiv').html(imgEx[this.id]);
+		// Get the value of the corresponding key in divEx
+		$('#exampleDiv').html(divEx[this.id]);
 	})
 
 
 
-var imgEx = {
-	sort: 'hi',
-	flatten: 'flat'
-	// pickRandom: ,
-	// forEach: ,
-	// filter: 
+var divEx = {
+	sort: '<pre class="divExam">sort</pre>',
+	flatten: '<pre class="divExam">flatten</pre>',
+	pickRandom: '<pre class="divExam">pickRandom</pre>',
+	forEach: '<pre class="divExam">forEach</pre>',
+	filter: '<pre class="divExam">filter</pre>' 
 }
 
 

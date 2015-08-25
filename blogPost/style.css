@@ -48,6 +48,11 @@ td {
 	padding: 5px;
 }
 
+.divExam {
+	height: 150px; 
+	width: 150px;
+}
+
 #exampleDiv {
 	border: 1px solid black;
 	height: 200px; 
