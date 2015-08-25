@@ -9,6 +9,7 @@ $(function() {
 			funcOrNot(lcd);
 		} else if ( $(this).attr('id') === 'cancel' ){
 			$('#screen').html(null);
+			$('#plot').html(null);
 		} else if ($(this).attr('id') === '=') {
 			funcOrNot(lcd);
 		} else if ($(this).attr('id') === 'deleteIt'){
