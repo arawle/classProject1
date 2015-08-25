@@ -48,8 +48,13 @@ td {
 	padding: 5px;
 }
 
-tr {
+#exampleDiv {
+	border: 1px solid black;
+	height: 200px; 
+	width: 200px;
+	float: right;
 }
+
 
 #npmText {
 	width: 154px;
