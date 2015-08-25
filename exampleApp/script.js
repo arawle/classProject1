@@ -68,17 +68,15 @@ $(function() {
 		draw(funcDraw);
 	} 
 
-	function draw(funcDraw) {
-	  try {
-	    functionPlot({
-	      target: '#plot',
-	      yDomain: [-10, 10],
-	      xDomain: [-10, 10],
-	      data: [{
-	        fn: math.eval('f(x) =' + funcDraw)
-	      }]
+	function draw (funcDraw) {
+	  try { 
+	  	functionPlot({
+      target: '#plot',
+      yDomain: [-5, 5],
+      xDomain: [0, 5],
+	    data: [{ fn: math.eval('f(x) =' + funcDraw) }]
 	    });
-	  }
+	 	}
 	  // if invalid, throw error
 	  catch (err) {
 	    console.log(err);

@@ -35,9 +35,6 @@ h1 {
   width: 335px;
   margin-left: auto;
   margin-right: auto;
-  position: relative;
-  clear: both;
-  float: left;
 }
 
 #screen-container {
@@ -58,9 +55,23 @@ h1 {
   z-index: 1;
 }
 
+.plotScreen {
+  background: #958675;
+  border: none;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.4em;
+  font-weight: 600;
+  height: 265px;
+  padding: 15px;
+  width: 265px;
+  z-index: 1;
+  overflow: hidden;
+
+}
+
 #zero {
-	position: relative;
   width: 225px;
+  float: left;
 }
 
 #cancel {
