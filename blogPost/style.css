@@ -48,6 +48,10 @@ td {
 	padding: 5px;
 }
 
+.greyIt {
+	color: red;
+}
+
 .divExam {
 	height: 150px; 
 	width: 150px;
