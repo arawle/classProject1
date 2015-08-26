@@ -2,9 +2,6 @@
 
 	function matrixIt (lcd, matrixDo) {
 		var toArr = lcd.split(' ');
-
-		console.log(toArr)
-
 		//determine which method to use
 		if (matrixDo === 'determ') {
 			$('#screen').text(math.det(math.eval(toArr)));
@@ -15,7 +12,6 @@
 		} else {
 			$('#screen').text(math.trace(math.eval(toArr)));
 		}
-
 	}
 
 	var matrixVar = {
