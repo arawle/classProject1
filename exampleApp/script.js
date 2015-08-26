@@ -1,6 +1,5 @@
 
 $(function() {
-
 		// create a variable and click handler to determine the type
 		// of calculator that the user wants
 		var calcDo = '';
@@ -9,6 +8,12 @@ $(function() {
 			$(this).css('backgroundColor', 'red');
 			chooseCalcType(calcDo);
 		})
+
+		var matrixDo = '';
+		$('#matrixButtons').on('click', 'span', function(){
+			alert('hi')
+		});
+
 
 		//determine whether or not the user needs an extra keyboard options
 		function chooseCalcType (calcDo) {
@@ -29,7 +34,8 @@ $(function() {
 			if ( $(this).attr('id') === 'calc' ) {
 				funcOrNot(lcd);
 			} else if (calcDo === 'matrix'){
-				matrixIt(lcd);
+				console.log(matrixDo)
+				matrixIt(lcd, matrixDo);
 			} else if ( $(this).attr('id') === 'cancel' ){
 				$('#screen').html(null);
 				$('#plot').html(null);
