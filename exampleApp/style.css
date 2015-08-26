@@ -120,4 +120,10 @@ h1 {
   font-size: 1.3em;
 }
 
-
+#matrixButtons {
+	visibility: hidden;
+	font-size: 7pt;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
