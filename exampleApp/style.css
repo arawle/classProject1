@@ -31,7 +31,7 @@ h1 {
 #calculator {
   background: #3A4248;
   border-radius: 20px;
-  padding: 15px;
+  padding: 15px 15px 15px 15px;
   width: 335px;
   margin-left: auto;
   margin-right: auto;
@@ -70,8 +70,15 @@ h1 {
 }
 
 #zero { 
-	float: left;
   width: 225px;
+}
+#calc {
+	background: #B99D71;
+  height: 89px;
+}
+.l-row {
+  position: absolute;
+  top: 832px;
 }
 
 #cancel {
@@ -83,14 +90,8 @@ h1 {
 	background: #B99D71;
 }
 
-#calc {
-	background: #B99D71;
-  height: 89px;
-  float: right;
-}
-
 #button-container {
-  padding: 10px 0 0 15px;
+  padding: 10px 0 0 18px;
 }
 
 .buttons {
@@ -131,7 +132,7 @@ h1 {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-	width: 390px;
+	width: 317px;
 	z-index: 1;
 }
 
