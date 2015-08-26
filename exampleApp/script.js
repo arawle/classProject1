@@ -5,7 +5,8 @@ $(function() {
 		var calcDo = '';
 		$('#calcDo').on('click', 'span', function (){
 			calcDo = this.id
-			$(this).css('backgroundColor', 'red');
+			$(this).css('backgroundColor', '#A6B1B9');
+			$(this).css('borderRadius', '3px')
 			chooseCalcType(calcDo);
 		})
 
