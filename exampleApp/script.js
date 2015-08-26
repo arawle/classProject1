@@ -13,12 +13,24 @@ $(function() {
 		function chooseCalcType (calcDo) {
 			if (calcDo === 'matrix') {
 				$('#matrixButtons').css('visibility', 'visible');
+				$('#basic').css('backgroundColor', 'transparent');
+				$('#stats').css('backgroundColor', 'transparent');
+				$('#prob').css('backgroundColor', 'transparent');
 			} else if (calcDo === 'stats'){
-				alert('stats') 
+				$('#matrixButtons').css('visibility', 'hidden');
+				$('#basic').css('backgroundColor', 'transparent');
+				$('#matrix').css('backgroundColor', 'transparent');
+				$('#prob').css('backgroundColor', 'transparent'); 
 			} else if (calcDo === 'prob'){
-				alert('prob')
+				$('#matrixButtons').css('visibility', 'hidden');
+				$('#basic').css('backgroundColor', 'transparent');
+				$('#matrix').css('backgroundColor', 'transparent');
+				$('#stats').css('backgroundColor', 'transparent'); 
 			} else {
-				alert('hi')
+				$('#matrixButtons').css('visibility', 'hidden');
+				$('#prob').css('backgroundColor', 'transparent');
+				$('#matrix').css('backgroundColor', 'transparent');
+				$('#stats').css('backgroundColor', 'transparent'); 
 			}
 		}
 

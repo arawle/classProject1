@@ -22,15 +22,12 @@
 		determinant: function (toArr) {
 			return math.det(math.eval(toArr));
 		},
-
 		dotProduct: function (lcd) {
 			return math.eval(lcd);
 		},
-
 		crossProduct: function (toArr) {
 			return math.crossProduct(math.eval(toArr));
 		},
-
 		trace: function (toArr) {
 			return math.trace(math.eval(toArr));
 		}
