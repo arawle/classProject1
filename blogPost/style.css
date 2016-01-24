@@ -4,77 +4,64 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
-
 body {
+	background-color: #FCEBCE;
+	border-color: black;
+	border-radius: 10px;
+	border-style: solid;
+	height: auto;
 	padding: 0px;
 	padding-left: 0px;
 	padding-right: 0px;
-	background-color: #FCEBCE;
-	border-radius: 10px;
-	border-style: solid;
-	border-color: black;
-	height: auto;
 }
-
 head {
-	text-align: center;
   height: 5%;
+	text-align: center;
   width: 100%;
- }
-
-h1 {
-	position: absolute;
-	margin: 5px;
-	color: black;
 }
-
+h1 {
+	color: black;
+	margin: 5px;
+	position: absolute;
+}
 img {
 	opacity: 0.75;
 }
-
 pre {
 	background-color: #ADB7B9;
-	padding: 7px;
 	margin: 10px;
+	padding: 7px;
 	text-align: left;
 	width: 830px;
 }
-
 table {
 	border: 1px solid black;
-	width: 55%;
 	float: left;
+	width: 55%;
 }
-
 td {
 	border-top: 1px solid black;
 	padding: 5px;
 }
-
+.calcInstructions {
+	width: 75%;
+}
+.divExam {
+	float: left;
+	height: 200px;
+	width: 450px;
+}
 .redIt {
 	color: red;
 }
-
-.divExam {
-	height: 200px; 
-	width: 450px;
-	float: left;
-}
-
 #exampleDiv {
+	float: left;
 	height: 280px;
 	width: 30%;
-	float: left;
 }
-
 #npmText {
 	width: 154px;
 }
-
 #textPos {
 	margin-left: 5px;
-}
-
-.calcInstructions {
-	width: 75%;
 }

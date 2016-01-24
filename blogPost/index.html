@@ -1,111 +1,138 @@
 <html>
-<head>
-	<title>Calculator</title>
-  <link rel='stylesheet' type='text/css' href='style.css' />
-  <script type='text/javascript' src='http://code.jquery.com/jquery-2.1.4.min.js'></script>
-   <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/mathjs/2.1.1/math.js'></script>
-
-	<script type='text/javascript' src='script.js'></script>
-</head>
-
-<body>
-	<div id = 'head'>
-		<header>
-			<h1>Math.js Tutorial</h1>
-		  <img id='header' img src='../header (1).jpg' alt='Banner Image'/ width='100%' height='150px'>
-		</header>
-	</div> 
-
-	<div id='textPos'>
-		<div>
-			<h3>What is Math.js?</h3>
-			<p>Math.js is a JavaScript and Node.js library which aims to add more functionality to the built in JavaScript Math library. Math.js allows for the use of complex and imaginary numbers, arrays, and matrices. </p>
-		</div>
-		<div>
-			<h3>How to install Math.js</h3>
-			You can install directly with npm using <pre id='npmText'>npm install mathjs</pre> or by linking to the <a href='http://cdnjs.cloudflare.com/ajax/libs/mathjs/2.1.1/math.js'>CDN page</a>
-		</div>
-		<div>
-			<h3>Where to implement Math.js</h3>
-			The easiest way to use Math.js in your web applications is to put the CDN script in the html head section
-			<pre>&lt;html&gt;<br/>&lt;span&gt;<br/>&lt;title&gt; Example &lt;&#47;title&gt;<br/>&lt;script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/mathjs/2.1.1/math.js'>&lt;&#47;script&gt;<br/>...</pre> 
-		</div>
-    <div>
-      <h3>What can Math.js do?</h3>
-      <h4>Evaluation of Expressions</h4>
-      math.eval( ) allows for the user to enter a mathematical equation and for the computer to evaluate it. Math.js allows evaluation of ( ), [ ], ^ , &#402;, in addition to the characters that js can already evaluate like + and -.
-      <h4>Complex Numbers</h4>
-      math.js has a number of features that allow it to deal with complex numbers like i.
-      <h4>Matrices</h4>
-      math.js has many built in functions for manipulating matrices, including many which are helpful using vector calculus. 
-        <ul>
-          <li>Cross Product <br/> math.cross(x,y) finds the cross product of two three-dimensional vectors. The cross product of two vectors is a vector perpendicular to A x B.</li><br/>
-          <li>Dot Product<br/> math.dot(x,y) find the dot product of two vectors of equal length. The dot product is the projection of one vector onto another. If two vectors are perpendicular to eachother, the dot product is zero.</li><br/>
-          <li>Trace<br/> math.trace(x) is the trace of a square array or matrix. The trace is the sum of the main diagonal of x. Finding the trace is significant if the matrix is a geometric projection in that the trace is the dimension of the space that it is being projected onto (common in Ordinary Differential Equations). </li><br/>
-          <li>Determinant<br/>math.det(x) is the determinant of a matrix. Determinants are especially useful in a subset of Topilogical Manifolds called knot theory. It is used in determining the mod coloring and Alexander Polynomial of a knot.</li>
-        </ul>
-      <h4>Probability and Statistics</h4>
-      math.js has many probability and statistics functions, and also can normalize data. A few of the more common statistics equations are on my calculator (probability coming soon).
-
-      <h4>Trigonometry</h4>
-      math.(whatever trig function you want)(x)<br/>
-      Because who doesn't want to know what csch(40) is. (8.4967*10^(-18))
-      <h3>Handy Uses</h3>
-        <table>
-          <thead>
-            <th>Syntax</th>
-            <th>Parameter</th>
-            <th>Return</th>
-            <th>Example</th>
-          </thead>
-          <tbody>
-            <tr>
-              <td>math.sort(x, [compare])</td>
-              <td>matrix or array, <br/>[function]</td> 
-              <td>sorted matrix</td>
-              <td class='click4Ex' id= 'sort'>Click!</td>
-            </tr>
-            <tr>
-              <td>math.flatten(array)</td>
-              <td>array</td> 
-              <td>flattened array</td>
-              <td class='click4Ex' id='flatten'>Click!</td>
-            </tr>
-            <tr>
-              <td>math.pickRandom(array)</td>
-              <td>array</td> 
-              <td>one random array value</td>
-              <td class='click4Ex' id='pickRandom'>Click!</td>
-            </tr>
-            <tr>
-              <td>math.forEach(x, callback)</td>
-              <td>matrix or array,<br/> function</td> 
-              <td>sorted Array</td>
-              <td class='click4Ex' id='forEach'>Click!</td>
-            </tr>
-            <tr>
-              <td>math.filter(x, test)</td>
-              <td>matrix or array,<br/> function or regular expression</td> 
-              <td>filtered matrix or array</td>
-              <td class='click4Ex' id='filter'>Click!</td>
-            </tr>
-          </tbody>
-        </table>
+  <head>
+  	<title>Calculator</title>
+    <link rel='stylesheet' type='text/css' href='style.css' />
+    <script type='text/javascript' src='http://code.jquery.com/jquery-2.1.4.min.js'></script>
+     <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/mathjs/2.1.1/math.js'></script>
+  	<script type='text/javascript' src='script.js'></script>
+  </head>
+  <body>
+  	<div id = 'head'>
+  		<header>
+  			<h1>Math.js Tutorial</h1>
+  		  <img id='header' img src='../header (1).jpg' alt='Banner Image'/ width='100%' height='150px'>
+  		</header>
+  	</div>
+  	<div id='textPos'>
+  		<div>
+  			<h3>What is Math.js?</h3>
+  			<p>
+          Math.js is a JavaScript and Node.js library which aims to add more functionality to the built in JavaScript Math library. Math.js allows for the use of complex and imaginary numbers, arrays, and matrices.
+        </p>
+  		</div>
+  		<div>
+  			<h3>How to install Math.js</h3>
+  			You can install directly with npm using <pre id='npmText'>npm install mathjs</pre> or by linking to the <a href='http://cdnjs.cloudflare.com/ajax/libs/mathjs/2.1.1/math.js'>CDN page</a>
+  		</div>
+  		<div>
+  			<h3>Where to implement Math.js</h3>
+  			The easiest way to use Math.js in your web applications is to put the CDN script in the html head section
+  			<pre>&lt;html&gt;<br/>&lt;span&gt;<br/>&lt;title&gt; Example &lt;&#47;title&gt;<br/>&lt;script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/mathjs/2.1.1/math.js'>&lt;&#47;script&gt;<br/>...</pre>
+  		</div>
+      <div>
+        <h3>What can Math.js do?</h3>
+        <h4>Evaluation of Expressions</h4>
+        math.eval( ) allows for the user to enter a mathematical equation and for the computer to evaluate it. Math.js allows evaluation of ( ), [ ], ^ , &#402;, in addition to the characters that js can already evaluate like + and -.
+        <h4>Complex Numbers</h4>
+        math.js has a number of features that allow it to deal with complex numbers like i.
+        <h4>Matrices</h4>
+        math.js has many built in functions for manipulating matrices, including many which are helpful using vector calculus.
+          <ul>
+            <li>
+              Cross Product
+              <br/>
+              math.cross(x,y) finds the cross product of two three-dimensional vectors. The cross product of two vectors is a vector perpendicular to A x B.
+            </li>
+            <br/>
+            <li>
+              Dot Product
+              <br/>
+              math.dot(x,y) find the dot product of two vectors of equal length. The dot product is the projection of one vector onto another. If two vectors are perpendicular to eachother, the dot product is zero.
+            </li>
+            <br/>
+            <li>
+              Trace
+              <br/>
+              math.trace(x) is the trace of a square array or matrix. The trace is the sum of the main diagonal of x. Finding the trace is significant if the matrix is a geometric projection in that the trace is the dimension of the space that it is being projected onto (common in Ordinary Differential Equations).
+            </li>
+            <br/>
+            <li>
+              Determinant
+              <br/>
+              math.det(x) is the determinant of a matrix. Determinants are especially useful in a subset of Topilogical Manifolds called knot theory. It is used in determining the mod coloring and Alexander Polynomial of a knot.
+            </li>
+          </ul>
+        <h4>Probability and Statistics</h4>
+        math.js has many probability and statistics functions, and also can normalize data. A few of the more common statistics equations are on my calculator (probability coming soon).
+        <h4>Trigonometry</h4>
+        math.(whatever trig function you want)(x)<br/>
+        Because who doesn't want to know what csch(40) is. (8.4967*10^(-18))
+        <h3>Handy Uses</h3>
+          <table>
+            <thead>
+              <th>Syntax</th>
+              <th>Parameter</th>
+              <th>Return</th>
+              <th>Example</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>math.sort(x, [compare])</td>
+                <td>matrix or array, <br/>[function]</td>
+                <td>sorted matrix</td>
+                <td class='click4Ex' id= 'sort'>Click!</td>
+              </tr>
+              <tr>
+                <td>math.flatten(array)</td>
+                <td>array</td>
+                <td>flattened array</td>
+                <td class='click4Ex' id='flatten'>Click!</td>
+              </tr>
+              <tr>
+                <td>math.pickRandom(array)</td>
+                <td>array</td>
+                <td>one random array value</td>
+                <td class='click4Ex' id='pickRandom'>Click!</td>
+              </tr>
+              <tr>
+                <td>math.forEach(x, callback)</td>
+                <td>matrix or array,<br/> function</td>
+                <td>sorted Array</td>
+                <td class='click4Ex' id='forEach'>Click!</td>
+              </tr>
+              <tr>
+                <td>math.filter(x, test)</td>
+                <td>matrix or array,<br/> function or regular expression</td>
+                <td>filtered matrix or array</td>
+                <td class='click4Ex' id='filter'>Click!</td>
+              </tr>
+            </tbody>
+          </table>
         <div id='exampleDiv'></div>
-    </div>
-		<div class= 'calcInstructions'>
-			<h3>Calculator Instructions</h3>
-      <ul>
-        <li>The default setting on the calculator is Basic. To press any of the standard characters, you must be on this setting.</li>
-        <li>The default setting for sin/cos/tan is radians. Use the &deg; button if you would like to calculate an angle in degrees. </li>
-        <li>To graph use the f(x)= button, plus the equation that you want to graph, then hit = . Once you have graphed, use your mouse to move around the coordinates as well as zoom in and out</li>
-        <li>Matrix, Statistics, and Probability should not be clicked until you have typed your full equation in.</li>
-        <li>Matrices must be typed in with a space between them when using the Matrix calculator.</li>
-        <li>Probability is coming soon!</li>
-      </ul>	
-		</div>
-	</div>
-
-</body>
-
+      </div>
+  		<div class= 'calcInstructions'>
+  			<h3>Calculator Instructions</h3>
+        <ul>
+          <li>
+            The default setting on the calculator is Basic. To press any of the standard characters, you must be on this setting.
+          </li>
+          <li>
+            The default setting for sin/cos/tan is radians. Use the &deg; button if you would like to calculate an angle in degrees.
+          </li>
+          <li>
+            To graph use the f(x)= button, plus the equation that you want to graph, then hit = . Once you have graphed, use your mouse to move around the coordinates as well as zoom in and out
+          </li>
+          <li>
+            Matrix, Statistics, and Probability should not be clicked until you have typed your full equation in.
+          </li>
+          <li>
+            Matrices must be typed in with a space between them when using the Matrix calculator.
+          </li>
+          <li>
+            Probability is coming soon!
+          </li>
+        </ul>
+  		</div>
+  	</div>
+  </body>
 </html>
