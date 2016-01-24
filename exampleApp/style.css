@@ -3,8 +3,8 @@ html {
 }
 @import url(http://fonts.googleapis.com/css?family=Oswald:700|Orbitron);
 body {
-	background-color: #FCEBCE;
-	border-color: black;
+  background-color: #FCEBCE;
+  border-color: black;
   border-radius: 10px;
   border-style: solid;
   padding: 0px;
@@ -15,7 +15,7 @@ h1 {
   color: black;
   float: left;
   margin: 5px;
-	position: absolute;
+  position: absolute;
 }
 .buttons {
   overflow: hidden;
